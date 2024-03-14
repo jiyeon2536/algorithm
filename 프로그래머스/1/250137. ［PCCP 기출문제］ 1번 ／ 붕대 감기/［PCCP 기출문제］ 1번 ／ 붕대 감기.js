@@ -6,7 +6,6 @@ function solution(bandage, health, attacks) {
     // 어택이 없으면 연속 +1 하고 체력 +변화량
     // 연속이 연속량을 꽉 채우고 어택이 없으면 +변화량 +보너스
     
-    
     const lenAttacks = attacks.length
     const lastAttack = attacks[lenAttacks - 1][0]
     let hp = health
