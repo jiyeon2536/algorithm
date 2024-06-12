@@ -1,9 +1,4 @@
 def solution(num_list):
-    odd = ''
-    even = ''
-    for n in num_list:
-        if n % 2: 
-            odd += str(n)
-        else:
-            even += str(n)
+    even = ''.join([str(n) for n in num_list if not n % 2])
+    odd = ''.join([str(n) for n in num_list if n % 2])
     return int(odd) + int(even)
