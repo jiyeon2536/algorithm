@@ -5,6 +5,7 @@ def solution(l, r):
         for j in str(i):
             if j in '12346789':
                 flag = 1
+                continue
         if flag == 0:
             answer.append(i)
     return answer or [-1]
