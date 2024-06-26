@@ -1,11 +1,8 @@
 def solution(n):
-    answer = 0
+    nums = set(range(2, n+1))   
     
-    for i in range(2, n + 1):
-        for j in range(2, int(i ** 0.5) + 1):
-            if i % j == 0:
-                break
-        else:
-            answer += 1        
-            
-    return answer
+    for i in range(2, n+1):
+        if i in nums:
+            nums -= set(range(2*i, n+1,i))
+    
+    return len(nums)
