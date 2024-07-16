@@ -1,12 +1,10 @@
 def solution(players, callings):
-    player_rank = {p: i for i, p in enumerate(players)}
-    rank_player = {i: p for i, p in enumerate(players)}
+    pla_dic = {key: i for i, key in enumerate(players)}
     
-    for call in callings:
-        player_rank[call] -= 1  
-        pre = rank_player[player_rank[call]]  
-        player_rank[pre] += 1 
-        rank_player[player_rank[call]] = call
-        rank_player[player_rank[call] + 1] = pre
+    for p in callings:
+        c = pla_dic[p]
+        pla_dic[p] -= 1
+        pla_dic[players[c-1]] += 1
+        players[c-1], players[c] = players[c], players[c-1]
 
-    return list(rank_player.values())
+    return players
