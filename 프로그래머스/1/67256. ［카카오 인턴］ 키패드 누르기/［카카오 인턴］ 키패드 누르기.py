@@ -6,8 +6,6 @@ def solution(numbers, hand):
     # dif = [[1, 3], [2, 4, 6], [5, 7, 9], [8, 10]]
     dif = {0: 0, 1: 1, 2: 2, 3: 1, 4: 2, 5: 3, 6: 2, 7: 3, 8: 4, 9: 3, 10: 4}
     for n in numbers:
-        ld = 0
-        rd = 0
         if n in [1, 4, 7]:
             answer += 'L'
             l_fing = n
