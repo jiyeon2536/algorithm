@@ -1,3 +1,3 @@
 const solution = (x, n) => {
-    return Array.from({length : n, '0' : x}, (el, idx) => x * (idx + 1) )
+    return Array.from({length : n}, (_, idx) => x * (idx + 1) )
 }
