@@ -1,7 +1,4 @@
 const solution = (arr, divisor) => {
-    let answer = [];
-    arr.forEach((el) => {
-        if (el % divisor === 0) answer.push(el)
-    })
+    const answer = arr.filter((el) => el % divisor === 0)
     return answer.length ? answer.sort((a, b) => a-b) : [-1];
 }
