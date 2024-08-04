@@ -1,7 +1,3 @@
 const solution = (price, money, count) => {
-    let total = 0;
-    for (let i = 1; i <= count; i++) {
-        total += (price * i)
-    }
-    return Math.max(total - money, 0)
+    return Math.max((price + (price * count)) * count / 2 - money, 0)
 }
