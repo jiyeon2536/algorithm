@@ -1,10 +1,10 @@
 # [level 1] 같은 숫자는 싫어 - 12906 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12906#qna) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12906?language=python3) 
 
 ### 성능 요약
 
-메모리: 83.4 MB, 시간: 38.34 ms
+메모리: 27.9 MB, 시간: 86.27 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 03월 26일 09:22:48
+2024년 08월 05일 16:50:25
 
 ### 문제 설명
 
