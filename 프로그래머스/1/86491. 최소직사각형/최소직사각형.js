@@ -1,11 +1,4 @@
 const solution = (sizes) => {
-    let mBig = 0
-    let mSmall = 0
-    sizes.forEach((el) => {
-        const bigger = Math.max(...el)
-        const smaller = Math.min(...el)
-        mBig = Math.max(bigger, mBig)
-        mSmall = Math.max(smaller, mSmall)
-    })
-    return mBig * mSmall
+    const [hor, ver] = sizes.reduce(([mw, mh], [w, h]) => [Math.max(mw, Math.max(w, h)), Math.max(mh, Math.min(w, h))], [0, 0] )
+    return hor * ver
 }
