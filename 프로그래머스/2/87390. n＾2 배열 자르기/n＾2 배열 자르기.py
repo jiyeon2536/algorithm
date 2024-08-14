@@ -1,8 +1,6 @@
 def solution(n, left, right):
     answer = []
-    idx = left
-    while idx <= right:
-        answer.append(max(idx // n, idx % n) + 1)
-        idx += 1
+    for i in range(left, right + 1):
+        answer.append(max(i//n, i%n) + 1)
     return answer
         
