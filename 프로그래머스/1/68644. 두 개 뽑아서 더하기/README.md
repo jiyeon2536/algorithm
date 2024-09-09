@@ -1,10 +1,10 @@
 # [level 1] 두 개 뽑아서 더하기 - 68644 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/68644#qna) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/68644?language=javascript) 
 
 ### 성능 요약
 
-메모리: 10.3 MB, 시간: 2.85 ms
+메모리: 33.5 MB, 시간: 1.02 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 06월 23일 22:12:14
+2024년 09월 09일 17:10:49
 
 ### 문제 설명
 
