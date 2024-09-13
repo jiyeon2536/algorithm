@@ -1,3 +1,5 @@
+from itertools import chain
+
 di = [1, 0, -1, 0]
 dj = [0, 1, -1, -1]
 
@@ -19,10 +21,5 @@ def solution(n):
             now_i, now_j = nxt_i, nxt_j
         else:
             dir_idx = (dir_idx + 1) % 4
-    
-    res = []
-    for a in answer:
-        for b in a:
-            res.append(b)
-    
-    return res
+        
+    return list(chain(*answer))
