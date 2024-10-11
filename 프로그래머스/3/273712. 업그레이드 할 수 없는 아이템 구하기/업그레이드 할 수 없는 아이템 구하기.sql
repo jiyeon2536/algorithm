@@ -1,6 +1,4 @@
 -- 코드를 작성해주세요
-
-# 루트 아이템 찾기
 SELECT ITEM_ID, ITEM_NAME, RARITY
 FROM ITEM_INFO
 WHERE ITEM_ID NOT IN 
