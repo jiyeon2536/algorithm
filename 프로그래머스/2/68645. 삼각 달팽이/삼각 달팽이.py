@@ -1,25 +1,29 @@
-from itertools import chain
-
-di = [1, 0, -1, 0]
-dj = [0, 1, -1, -1]
+d = [(1, 0), (0, 1), (-1, -1)]
 
 def solution(n):
-    answer = [[0] * (_+1) for _ in range(n)]
-    total = sum([i + 1 for i in range(n)])
-    cnt = 1
+    # 정사각 배열을 만든다
+    init = [[0] * n for _ in range(n)]
     
-    now_i, now_j = 0, 0
-    answer[now_i][now_j] = 1
-    dir_idx = 0
-
-    while cnt < total:
-        nxt_i, nxt_j = now_i + di[dir_idx], now_j + dj[dir_idx]
+    length = n * (n + 1) // 2
+    r, c = 0, 0
+    j = 0
+    
+    for i in range(1, length + 1):        
+        init[r][c] = i
         
-        if 0 <= nxt_i < n and 0 <= nxt_j <= nxt_i and answer[nxt_i][nxt_j] == 0:
-            cnt += 1 
-            answer[nxt_i][nxt_j] = cnt
-            now_i, now_j = nxt_i, nxt_j
-        else:
-            dir_idx = (dir_idx + 1) % 4
+        if i == length:
+            break
+            
+        while True:
+            nr = r + d[j][0]
+            nc = c + d[j][1]
         
-    return list(chain(*answer))
+            if nr < 0 or nc < 0 or nr >= n or nc >= n or nr < nc or init[nr][nc] != 0:
+                j = (j + 1) % 3
+        
+            else:
+                r = nr
+                c = nc
+                break
+        
+    return [elem for arr in init for elem in arr if elem != 0]
